@@ -2,8 +2,7 @@
 var LA = {lat: 34.0554665, lng: -118.30951240000002};
 var SF = {lat: 37.7749, lng: -122.4194}; 
 //TEST DATA - current user info
-var currentLocation = SF;
-var currentUser = "bill@gmail.com";
+var currentLocation = LA;
 var friendsList = ["4147363198", "4147363198", "4149753642"];
 
 //test branch new-branch 
@@ -32,7 +31,7 @@ function createMarkerContent(restaurant, callback){
                 //start each individual review with a new div
                 markerHTML = markerHTML + "<div class='review-wrapper'>";
                 //add the reviewer name
-                markerHTML = markerHTML + "<p class='review-author'>" + allReviews[j].author + " says: </p>";
+                markerHTML = markerHTML + "<p class='review-author'>" + localCopyUsers[allReviews[j].author].name + " says: </p>";
                 //add the reviewer's text review
                 markerHTML = markerHTML + "<p>" + allReviews[j].text + "</p>";
                 //add all images saved along with the review
